@@ -1,0 +1,28 @@
+###
+ GET http://localhost:4000/api/employees
+
+### 
+ POST http://localhost:4000/api/employees
+
+ Content-Type: application/json
+
+ {
+   "nombre": "Yahir", "edad": "33", "sexo": "masculino", "codigo": "001"
+ }
+
+ ###
+
+GET http://localhost:3100/api/employees/5b0624a7abcb202a3af189b6 HTTP/1.1
+
+###
+
+PUT http://localhost:3100/api/employees/5b0624a7abcb202a3af189b6 
+
+Content-Type: application/json
+
+{
+"name": "Joe McMillan", "position": "Digital Marketing Manager", "office": "California", "salary": "20000"
+}
+
+### 
+DELETE http://localhost:3100/api/employees/5b0627e6edb8f82dcc1486ff

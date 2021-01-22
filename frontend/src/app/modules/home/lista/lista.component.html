@@ -1,0 +1,40 @@
+    
+    <div class="columns">
+      <div class="column">
+          Nombre
+      </div>
+      <div class="column">
+        Edad
+      </div>
+      <div class="column">
+        Sexo
+      </div>
+      <div class="column">
+          Código
+      </div>
+
+      <div class="column">
+          
+      </div>
+  </div>
+
+  <div class="columns" *ngFor="let employee of employeeService.employees">
+      <div class="column">
+        {{ employee.nombre }}
+      </div>
+      <div class="column">
+        {{ employee.edad }}
+      </div>
+      <div class="column">
+        {{ employee.sexo }}
+      </div>
+      <div class="column">
+        {{ employee.codigo }}
+      </div>
+
+      <div class="column">
+        <a [routerLink] = "['/editar',employee._id]"> Editar </a>
+      </div>
+  </div>
+
+  
