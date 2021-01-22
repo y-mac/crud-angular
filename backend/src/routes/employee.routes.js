@@ -8,7 +8,7 @@ router.get('/',employeeCtrl.getEmployees);
 
 router.post('/',employeeCtrl.createEmployee);
 
-router.get('/:id',employeeCtrl.getEmployee);
+router.post('/:id',employeeCtrl.getEmployee);
 
 router.put('/:id',employeeCtrl.editEmployee);
 

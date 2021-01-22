@@ -1,1 +1,31 @@
-<p>crear works!</p>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+    <div>
+        Nombre: <input formControlName="name" />
+        <span *ngIf="(name.dirty || name.touched) && name.invalid && name.errors.required">
+            El nombre es requerido.
+        </span>
+    </div>
+  
+    <div>
+        Edad: <input formControlName="age" type="number" /> 
+        <span *ngIf="(age.dirty || age.touched) && age.invalid && age.errors.required">
+            La edad es requerida.
+        </span>
+
+        <span *ngIf="age.errors && (age.errors.min || age.errors.max)">
+            El rango de edad es de 9 a 90 años
+        </span>
+    </div>
+
+    <div>
+        Sexo: <select formControlName="gender">
+            <option value="M">M</option>
+            <option value="F">F</option>
+          </select>
+    </div>
+
+
+    <br />
+  
+    <button type="submit" [disabled]="!employeeForm.valid">Save</button>
+  </form>

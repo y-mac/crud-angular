@@ -28,6 +28,10 @@ export class EmployeeService {
     return this.http.get<Employee[]>(this.URL_API);
   }
 
+  getEmployee(employee: Employee) {
+    return this.http.post(this.URL_API + `/${employee._id}`, employee);
+  }
+
   putEmployee(employee: Employee) {
     return this.http.put(this.URL_API + `/${employee._id}`, employee);
   }

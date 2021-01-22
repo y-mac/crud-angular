@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from "../../../services/employee.service";
-import { ActivatedRoute }  from "@angular/router"
 import { NgForm } from "@angular/forms";
 import { Employee } from "../../../models/employee";
 
@@ -13,7 +12,7 @@ import { Employee } from "../../../models/employee";
   providers: [EmployeeService]
 })
 export class ListaComponent implements OnInit {
-
+  employees: Employee[] = [];
   constructor(private employeeService: EmployeeService) {
     
   }

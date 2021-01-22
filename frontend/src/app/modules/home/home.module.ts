@@ -6,6 +6,7 @@ import { CrearComponent } from './crear/crear.component';
 import { ListaComponent } from './lista/lista.component';
 import { EditarComponent } from './editar/editar.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ReactiveFormsModule } from '@angular/forms'
  
 
 
@@ -14,7 +15,8 @@ import { InicioComponent } from './inicio/inicio.component';
   declarations: [CrearComponent, ListaComponent, EditarComponent, InicioComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class HomeModule { }
